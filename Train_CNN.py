@@ -24,10 +24,6 @@ val_loader = DataLoader(dataset=test_set, batch_size=1, shuffle=True)
 
 model = AnimeCNNModel(in_channel=in_channel)
 
-# image_dir = './data/Berserk/berserk_1.jpg'
-# test_tensor = torchvision.io.read_image(image_dir, mode=torchvision.io.image.ImageReadMode.RGB).float()
-# test_tensor = torchvision.transforms.Resize((700, 700))(test_tensor)
-
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 loss_func = nn.CrossEntropyLoss()
 
